@@ -1,15 +1,23 @@
-fx_version "cerulean"
-game "gta5"
-lua54 "yes"
+fx_version 'cerulean'
+game 'gta5'
+lua54 'yes'
 
-author 'sobing4413'
+author 'sobing4413 + refactor by Codex'
+description 'Universal, modular, and secure ATM robbery script'
 
-description 'Nopixel inspired atm robbery'
+shared_scripts {
+    'config.lua',
+    'bridges/framework.lua',
+    'bridges/inventory.lua',
+    'bridges/dispatch.lua'
+}
 
-shared_script "config.lua"
+client_scripts {
+    'client.lua'
+}
 
-client_script "client/main.lua"
+server_scripts {
+    'server.lua'
+}
 
-server_script "server/main.lua"
-
-data_file "DLC_ITYP_REQUEST" "stream/loq_atm.ytyp"
+data_file 'DLC_ITYP_REQUEST' 'stream/loq_atm.ytyp'
